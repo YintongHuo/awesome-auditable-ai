@@ -34,6 +34,7 @@ A curated list of papers, tools, datasets, benchmarks, and standards for buildin
 - [Datasets and Benchmarks](#datasets-and-benchmarks)
 - [Tools and Platforms](#tools-and-platforms)
 - [Standards and Governance](#standards-and-governance)
+- [Related Projects](#related-projects)
 - [Contributing](#contributing)
 
 </details>
@@ -213,6 +214,8 @@ A reader-first map of where AI agent reliability is won and lost. Reliability is
 
 **[TypeScript] MakerChecker** ([sammysltd/MakerChecker](https://github.com/sammysltd/MakerChecker)): self-hosted governance for AI agents with role-based execution, human approval gates, and a hash-chained, Ed25519-signed audit log of every action.
 
+**[TypeScript] aegis** ([Justin0504/aegis](https://github.com/Justin0504/aegis)): runtime policy enforcement for AI agents with a cryptographic audit trail, human-in-the-loop approvals, and a kill switch, applied with no changes to agent code.
+
 **[TypeScript, Python] AgentLens** ([agentkitai/agentlens](https://github.com/agentkitai/agentlens)): MCP-native observability and audit-trail platform that records LLM calls, tool invocations, and decisions in an append-only, SHA-256 hash-chained, verifiable event log.
 
 ---
@@ -318,6 +321,18 @@ Standards and governance instruments for agent reliability and accountability. P
 **[Standard] OWASP Top 10 for LLM Applications and OWASP Top 10 for Agentic Applications** ([genai.owasp.org](https://genai.owasp.org/llm-top-10/), [agentic 2026](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/)): community-maintained risk lists for language-model and agentic applications, covering prompt injection, excessive agency, tool misuse, memory and context poisoning, and goal hijacking. OWASP, 2025 (LLM) / 2026 (Agentic).
 
 **[Standard] C2PA Technical Specification / Content Credentials** ([spec.c2pa.org](https://spec.c2pa.org/specifications/specifications/2.2/specs/_attachments/C2PA_Specification.pdf), [c2pa-rs](https://github.com/contentauth/c2pa-rs)): cryptographically signed, tamper-evident metadata standard that records the origin and edit history of media, including a manifest for AI-generated and AI-edited content. C2PA (Adobe, Microsoft, BBC, Intel, Truepic, Sony, and others), v2.2 (2025).
+
+---
+
+## Related Projects
+
+Open-source projects for inspecting and controlling agent decisions, which compose across the agent lifecycle:
+
+- **[agent-audit](https://github.com/HeadyZhang/agent-audit)**: static security scanner for agent code and MCP configuration, with rules mapped to the OWASP Agentic Top 10 (2026).
+- **[aegis](https://github.com/Justin0504/aegis)**: runtime policy enforcement with a cryptographic audit trail, human-in-the-loop approvals, and a kill switch.
+- **[auditable](https://github.com/yzhao062/auditable)**: SDK that captures a signed record of each agent decision and audits it across past, present, and future on one typed graph.
+
+The Reliability Map above draws on **[GRADE](https://github.com/yzhao062/grade)** ([arXiv:2606.22741](https://arxiv.org/abs/2606.22741)), a two-layer graph representation of agent execution and dependency.
 
 ---
 
