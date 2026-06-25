@@ -10,3 +10,6 @@ assets/_previews/
 Thumbs.db
 .idea/
 .vscode/
+
+# Citation audit artifact (local only)
+REFERENCE-CHECK.md
